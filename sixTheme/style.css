@@ -1,0 +1,149 @@
+/*
+Theme Name: Six Theme
+Theme URI: https://wordpress.org/themes/sixtheme/
+Author: Moshiur Rahman
+Author URI: https://moshiur.org/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sixtheme
+*/
+
+
+/* A Free Design by Bryant Smith (bryantsmith.com) */
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	background: #1364A6;
+	background-image:url(images/background.png);
+	background-repeat:repeat-x;
+}
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;}
+
+#container
+{
+  display: block; 
+  height:auto;
+  position: relative; 
+  width: 750px;
+  background-image:url(images/background.jpg);
+  background-repeat:repeat-y;
+  padding-left:17px;
+  padding-right:17px;
+  overflow:hidden;
+}
+
+#links
+{
+display:block;
+float:right;	
+margin-top:25px;
+margin-right:10px;
+}
+
+#links a, #links a:visited
+{
+font-size:16px;
+font-weight:bold;
+margin-left:4px;
+margin-right:4px;
+color: #1652B4;
+text-decoration:none;
+}
+
+#links a:hover
+{
+border-bottom:dotted 1px #1652B4;
+}
+
+#header
+{
+height:60px;
+
+}
+
+#header h1
+{
+margin-top:15px;
+margin-left:10px;
+font-size:33px;
+color:#0A2645;
+float:left;
+}
+
+.off
+{
+color:#1652B4;
+}
+
+.picture
+{
+	background-image:url(images/imagebackground.jpg);
+	background-repeat:repeat-x;
+	background-position:bottom;
+	padding-bottom:8px;
+	margin-top:22px;
+}
+
+
+.contenttext h2
+{
+color:#123F83;
+font-size:24px;
+margin-bottom:10px;
+	
+}
+
+.contenttext
+{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
+#footer
+{
+font-size:12px;
+color:#519FEE;
+margin-top:18px;
+width:750px;
+text-align:center;
+}
+#footer a, #footer a:visited
+{
+	text-align:center;
+color:#ADCCF1;
+	text-decoration:none;
+}
+
+html, body {
+text-align: center;
+}
+
+p {text-align: left;}
+
+#links ul {
+	list-style: none;
+}
+
+#links ul li {
+	display: inline-block;
+}
+
+#content img {
+	width: 750px;
+	height: 197px;
+}
