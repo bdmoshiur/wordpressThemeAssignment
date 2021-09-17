@@ -1,5 +1,11 @@
 <?php
 
+if ( site_url() == 'http://localhost/wordpress-project' ) {
+    define('VERSION', time());
+} else {
+    define('VERSION', wp_get_theme()->get("Version"));
+}
+
 function seventheme_after_setup_theme() {
     
     load_theme_textdomain('seventheme');
@@ -19,9 +25,11 @@ add_action( 'after_setup_theme', 'seventheme_after_setup_theme' );
 
 function seventheme_wp_enqueue_script() {
     
-    wp_enqueue_style('seventheme', get_stylesheet_uri());
-    wp_enqueue_style( 'bootstarp', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
-    // wp_enqueue_script();
+    wp_enqueue_style('seventheme', get_stylesheet_uri(), null, VERSION );
+    wp_enqueue_style( 'bootstarp', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', null, VERSION );
+    wp_enqueue_style( 'featherlight-css', '//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css', null, VERSION );
+    wp_enqueue_script( 'featherlight-js', '//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js', array('jquery'), VERSION, true);
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery','featherlight-js'), VERSION, true);
 }
 
 add_action( 'wp_enqueue_scripts', 'seventheme_wp_enqueue_script' );
@@ -60,4 +68,4 @@ function seventheme_widgets_init() {
 add_action( 'widgets_init', 'seventheme_widgets_init' );
 
 // Editor change
-add_filter( 'use_widgets_block_editor', '__return_false' );
+add_filter( 'use_widgets_block_editor', '__return_false', 10, 2 );
